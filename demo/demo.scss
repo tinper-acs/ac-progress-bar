@@ -1,0 +1,28 @@
+@import "../node_modules/tinper-bee-core/scss/index.scss";
+@import "../node_modules/bee-layout/src/Layout.scss";
+@import "../node_modules/bee-panel/src/Panel.scss";
+@import "../node_modules/bee-button/src/button.scss";
+@import "../src/index.scss";
+
+.demoPadding{
+    margin: 30px 0;
+    button{
+        margin: auto 5px;
+    }
+    .start_button{
+        margin-bottom:20px;
+        width: 72px;
+        height: 38px;
+        border:1px solid #ddd;
+        border-radius: 3px;
+        line-height: 38px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .divider{
+        margin: 6px 0;
+        height: 1px;
+        overflow: hidden;
+        background-color: #e0e0e0;
+    }
+}
