@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 import ProgressBarDiwork from '../../src/index';
- class Demo1 extends Component {
+ class Demo2 extends Component {
     
     constructor(props){
         super(props);
@@ -45,12 +45,16 @@ import ProgressBarDiwork from '../../src/index';
 
     render () {
         return (
-            <div className="demoPadding">
+            <div className="demoPadding" style={{paddingBottom:'20px'}}>
                 <div className="start_button" onClick={this.setStartFunc}>开始按钮</div>
-                <ProgressBarDiwork className={'32'} check={this.checkFunc} loadingOverFunc={this.loadingOverFunc} tenantId={'1'} startFlag={this.state.now} loadingDesc={'正在配置团队信息…'}/>
+                <ProgressBarDiwork className={'self-progress-bar'} check={this.checkFunc} loadingOverFunc={this.loadingOverFunc} tenantId={'1'} startFlag={this.state.now}>
+                    <span className="other-demo" style={{color:'red'}}>
+                        测试其他dom
+                    </span>
+                </ProgressBarDiwork>
             </div>
         )
     }
 }
 
-export default Demo1;
+export default Demo2;

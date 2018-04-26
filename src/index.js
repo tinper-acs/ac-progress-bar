@@ -13,7 +13,7 @@ const propsTypes = {
 const defaultProps ={
     tenantId:'default',
     startFlag:false,
-    loadingDesc:'正在配置信息…',
+    loadingDesc:null,
 }
 
 class  ProgressBarDiwork extends Component {
@@ -68,13 +68,20 @@ class  ProgressBarDiwork extends Component {
     }
 
     render(){
-        const {loadingDesc}  = this.props
+        const {loadingDesc, className, children, ...restProps}  = this.props
         let now = this.state.processValue;
+        let classes;
+        if(className){
+            classes = `progress_loading ${className}`
+        }else{
+            classes = `progress_loading`;
+        }
         return(
             <div className={"progress_wrap"}>
-                <ProgressBar  className={ "progress_loading" } striped={false} now = {now} label={`${now}%`} ></ProgressBar>
+                <ProgressBar  className={classes} {...restProps}  now = {now} label={`${now}%`} ></ProgressBar>
                 {/* <Icon className={progress_load_icon} type="loading" /> */}
-                <span className={"loading_desc"}>{loadingDesc}</span>
+                { loadingDesc && <span className={"loading_desc"}>{loadingDesc}</span>}
+                {children}
             </div>
         )
     }
