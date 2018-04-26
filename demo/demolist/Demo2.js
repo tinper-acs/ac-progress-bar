@@ -1,7 +1,7 @@
 /**
  *
  * @title 应用组件名称
- * @description 应用组件描述, 自定义check方法
+ * @description 应用组件描述, 自定义其他dom
  *
  */
 
