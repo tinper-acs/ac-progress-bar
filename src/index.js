@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProgressBar from 'bee-progress-bar';
+import "./index.scss"
 
 const propsTypes = {
     tenantId:PropTypes.string,
@@ -36,7 +37,7 @@ class  ProgressBarDiwork extends Component {
 
     goToLoading = (tenantId) =>{
         const tenantIdVal = tenantId || this.props.tenantId;
-        if(tenantIdVal == '' || tenantIdVal == undefined) return false;    
+        if(tenantIdVal == '' || tenantIdVal == undefined) return false;
         const {check} = this.props;
         let self = this;
         let perValue  = (Math.floor(Math.random()*10+1));//输出1～10之间的随机整数
@@ -85,7 +86,7 @@ class  ProgressBarDiwork extends Component {
             </div>
         )
     }
-    
+
 }
 ProgressBarDiwork.propsTypes = propsTypes;
 ProgressBarDiwork.defaultProps = defaultProps;

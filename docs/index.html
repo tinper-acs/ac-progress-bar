@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>app-progress-bar</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-2"><a href="#app-progress-bar">app-progress-bar</a></li>
+    <li class="sidebar-header-2"><a href="#api">API</a></li>
+    <li class="sidebar-header-4"><a href="#开发调试">开发调试</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h2 id="app-progress-bar">app-progress-bar</h2>
+<h2 id="api">API</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:right">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">tenantId</td>
+<td style="text-align:center">接口请求的关键字，会在check中传递</td>
+<td style="text-align:center">String</td>
+<td style="text-align:right">default</td>
+</tr>
+<tr>
+<td style="text-align:left">startFlag</td>
+<td style="text-align:center">何时开始进行</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:right">false</td>
+</tr>
+<tr>
+<td style="text-align:left">loadingDesc</td>
+<td style="text-align:center">描述,不传递的时候不展示</td>
+<td style="text-align:center">String</td>
+<td style="text-align:right">null</td>
+</tr>
+<tr>
+<td style="text-align:left">check</td>
+<td style="text-align:center">不断请求接口并反复调用的函数</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:left">loadingOverFunc</td>
+<td style="text-align:center">进度完成后的回调函数</td>
+<td style="text-align:center">Function</td>
+</tr>
+</tbody>
+</table>
+<h4 id="开发调试">开发调试</h4>
+<pre class="hljs"><code>$ npm install -g ac-tools
+$ git <span class="hljs-built_in">clone</span> git@github.com:tinper-acs/ac-pagination.git
+$ <span class="hljs-built_in">cd</span> ac-pagination
+$ npm install
+$ npm run dev</code></pre>      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
